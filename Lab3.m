@@ -11,6 +11,7 @@ for k = 1:N %for loop appending to xt
 end
 X = fft(xt,L); %fourier transform 
 Xf = 2*abs(X)/L; 
+
 subplot(2,1,1);
 plot(t,xt);
 xlim([0, 2]);
@@ -18,6 +19,7 @@ grid on, grid minor;
 xlabel('t (sec)');
 ylabel('x(t)'); %real sinusoidal sum expression
 title('Square wave in time domain');
+
 subplot(2,1,2);
 plot(f(1:(L/2)), Xf(1:L/2));
 grid on, grid minor;
